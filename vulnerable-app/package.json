@@ -1,0 +1,14 @@
+{
+  "name": "vulnerable-cartera-lab",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Aplicacion full stack intencionalmente vulnerable para laboratorio SAST/DAST.",
+  "scripts": {
+    "install:all": "cd backend && npm install && cd ../frontend && npm install",
+    "db:init": "cd backend && npm run db:init",
+    "backend": "cd backend && npm start",
+    "frontend": "npm --prefix frontend exec vite -- frontend --host 0.0.0.0 --port 5173",
+    "audit:backend": "cd backend && npm audit",
+    "audit:frontend": "cd frontend && npm audit"
+  }
+}

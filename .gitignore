@@ -1,0 +1,30 @@
+# Dependencias Node.js
+node_modules/
+npm-debug.log*
+yarn-error.log
+
+# Base de datos SQLite (datos de laboratorio)
+*.sqlite
+*.db
+
+# Archivos de entorno con secretos
+.env
+
+# Carpeta de trabajo de SonarQube
+.scannerwork/
+
+# Archivos de build / dist del frontend
+dist/
+build/
+
+# Archivos subidos al servidor de la app
+vulnerable-app/backend/src/uploads/*
+!vulnerable-app/backend/src/uploads/.gitkeep
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,30 @@
+{
+  "name": "vulnerable-cartera-backend",
+  "version": "1.0.0",
+  "description": "Backend educativo intencionalmente vulnerable para gestion de clientes y cartera.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "db:init": "node src/db/init.js",
+    "audit": "npm audit"
+  },
+  "dependencies": {
+    "axios": "0.21.1",
+    "body-parser": "1.19.0",
+    "cors": "2.8.5",
+    "dotenv": "8.2.0",
+    "express": "4.17.1",
+    "jsonwebtoken": "8.5.1",
+    "lodash": "4.17.20",
+    "moment": "2.29.1",
+    "multer": "1.4.4-lts.1",
+    "request": "2.88.2",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {
+    "eslint": "7.32.0",
+    "eslint-plugin-security": "1.4.0",
+    "nodemon": "2.0.7"
+  }
+}

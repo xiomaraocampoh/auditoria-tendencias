@@ -1,0 +1,26 @@
+services:
+  vulnerable-backend:
+    image: node:20
+    working_dir: /app/backend
+    command: sh -c "npm install && npm run db:init && npm start"
+    ports:
+      - "4000:4000"
+    volumes:
+      - .:/app
+    environment:
+      - PORT=4000
+      - DB_FILE=./src/db/cartera.sqlite
+      - JWT_SECRET=secret123
+      - ADMIN_USER=admin
+      - ADMIN_PASSWORD=admin123
+
+  vulnerable-frontend:
+    image: node:20
+    working_dir: /app/frontend
+    command: sh -c "npm install && npm run dev -- --host 0.0.0.0"
+    ports:
+      - "5173:5173"
+    volumes:
+      - .:/app
+    depends_on:
+      - vulnerable-backend

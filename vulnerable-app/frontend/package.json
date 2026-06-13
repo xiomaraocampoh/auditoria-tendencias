@@ -1,0 +1,27 @@
+{
+  "name": "vulnerable-cartera-frontend",
+  "version": "1.0.0",
+  "description": "Frontend React educativo intencionalmente vulnerable.",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 5173",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "4.2.0",
+    "axios": "0.21.1",
+    "bootstrap": "5.3.3",
+    "lucide-react": "0.468.0",
+    "lodash": "4.17.20",
+    "moment": "2.29.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "vite": "5.0.0"
+  },
+  "devDependencies": {
+    "eslint": "7.32.0",
+    "eslint-plugin-react": "7.24.0",
+    "eslint-plugin-security": "1.4.0"
+  }
+}
