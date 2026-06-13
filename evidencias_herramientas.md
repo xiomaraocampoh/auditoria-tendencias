@@ -104,7 +104,7 @@ $ curl -s -u admin:admin -X POST "http://localhost:9000/api/user_tokens/generate
 
 # Respuesta:
 {"login":"admin","name":"auditoria-token",
- "token":"sqa_a56adeba93a2ffac62d3b7eae4858f3ae47d1bbe",
+ "token":"sqa_[REDACTED-SONAR-TOKEN-LAB]",
  "createdAt":"2026-06-13T19:21:49+0000","type":"GLOBAL_ANALYSIS_TOKEN"}
 ```
 
@@ -117,7 +117,7 @@ $ sonar-scanner \
   -Dsonar.sources=. \
   -Dsonar.exclusions="**/node_modules/**,**/.scannerwork/**,**/dist/**" \
   -Dsonar.host.url=http://localhost:9000 \
-  -Dsonar.token=sqa_a56adeba93a2ffac62d3b7eae4858f3ae47d1bbe
+  -Dsonar.token=sqa_[REDACTED-SONAR-TOKEN-LAB]
 ```
 
 **Salida del escaneo (fragmento relevante):**
@@ -780,8 +780,8 @@ $ curl -s "http://localhost:4000/api/legacy/weak-crypto?value=admin123"
   "hash": "0192023a7bbd73250516f069df18b500",
   "token": "k7x2m9p1q3r5s741748912345678",
   "secrets": {
-    "AWS_ACCESS_KEY_ID": "AKIAIOSFODNN7EXAMPLE",
-    "AWS_SECRET_ACCESS_KEY": "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY",
+    "AWS_ACCESS_KEY_ID": "AKIA[REDACTED-FAKE-AWS-KEY]",
+    "AWS_SECRET_ACCESS_KEY": "[REDACTED-FAKE-AWS-SECRET-KEY]",
     "PRIVATE_KEY": "-----BEGIN PRIVATE KEY-----\nMIICeAIBADANBgkqhkiG9w0BAQEFAASCAmIwggJeAgEAAoGBALab\n-----END PRIVATE KEY-----",
     "SQL_BACKUP_PASSWORD": "P@ssw0rd_Backup_123",
     "CARD_TEST_NUMBER": "4111111111111111"

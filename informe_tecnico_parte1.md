@@ -2400,8 +2400,8 @@ Se identificaron múltiples credenciales, claves de API, secretos criptográfico
 // ======================================================
 
 // Claves de acceso AWS (acceso completo a servicios cloud)
-const AWS_ACCESS_KEY = 'AKIAIOSFODNN7EXAMPLE';
-const AWS_SECRET_KEY = 'wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY';
+const AWS_ACCESS_KEY = 'AKIA[REDACTED-FAKE-AWS-KEY]';
+const AWS_SECRET_KEY = '[REDACTED-FAKE-AWS-SECRET-KEY]';
 
 // Clave privada RSA expuesta en código
 const PRIVATE_KEY = `-----BEGIN RSA PRIVATE KEY-----
@@ -2474,7 +2474,7 @@ Falta de políticas de gestión de secretos. Los secretos se colocaron en el có
 
 ```bash
 # Rotar claves AWS inmediatamente:
-aws iam delete-access-key --access-key-id AKIAIOSFODNN7EXAMPLE
+aws iam delete-access-key --access-key-id AKIA[REDACTED-FAKE-AWS-KEY]
 
 # Limpiar historial de git (requiere reescritura del historial):
 git filter-branch --force --index-filter \
